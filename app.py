@@ -1,44 +1,36 @@
-from flask import Flask, render_template, request
-from flask.ext.sqlalchemy import SQLAlchemy
-
-from flask.ext.heroku import Heroku
+from flask import *
+from Database import *
 
 app = Flask(__name__)
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/pre-registration'
-heroku = Heroku(app)
-db = SQLAlchemy(app)
+app.secret_key = "MY_SUPER_SECRET_KEY"
 
-# Create our database model
-class User(db.Model):
-    __tablename__ = "users"
-    id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(120), unique=True)
+engine = create_engine('sqlite:///database.db')
 
-    def __init__(self, email):
-        self.email = email
-
-    def __repr__(self):
-        return '<E-mail %r>' % self.email
+Base.metadata.bind = engine
+DBSession = sessionmaker(bind=engine, autoflush=False)
+session = DBSession()
 
 # Set "homepage" to index.html
 @app.route('/')
-def index():
-    return render_template('index.html')
+def home():
+    return render_template('Home.html')
 
 # Save e-mail to database and send to success page
-@app.route('/prereg', methods=['POST'])
-def prereg():
-    email = None
+@app.route('/register', methods=['POST'])
+def register():
     if request.method == 'POST':
-        email = request.form['email']
+        submitted_email = request.form['email']
         # Check that email does not already exist (not a great query, but works)
-        if not db.session.query(User).filter(User.email == email).count():
-            reg = User(email)
-            db.session.add(reg)
-            db.session.commit()
-            return render_template('success.html')
-    return render_template('index.html')
+        if not session.query(Emails).filter_by(email= submitted_email).count():
+            reg = Emails(email=submitted_email, name=request.form['fullName'])
+            session.add(reg)
+            session.commit()
+            return render_template('Home.html')
+    return render_template('Home.html')
+
+@app.route('/merch')
+def merch():
+    return render_template('Merch.html')
 
 if __name__ == '__main__':
-    #app.debug = True
-    app.run()
+    app.run(debug=True)

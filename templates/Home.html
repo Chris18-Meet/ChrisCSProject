@@ -3,8 +3,11 @@
 <head>
 	<title>	Chriszson CBI </title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="Style.css">
-	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<!-- 	<link rel="stylesheet" href="{{url_for('static',filename='css/Style.css')}}">
+ -->
+	<link rel="stylesheet" href="../static/css/Style.css">
+
+ 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="icon" 
@@ -28,14 +31,14 @@
 		<li><a href="#second-page" class="some">MEDIA</a><br></li>
 		<li><a href="#third-page" class="some">ABOUT</a><br></li>
 		<li><a href="#fourth-page" class="some">SUBSCRIBE</a></li>
-		<li><a href="Merch.html" class="some">MERCH</a></li>
+		<li><a href="{{url_for('merch')}}" class="some">MERCH</a></li>
 	</ul>
 
 	</div>
 
 	<div id="first-page">
 		<div id="logo-text">
-		  	<img width="50%" src="Logo_Transparent.png" alt="Avatar" class="image" syle=width="960">
+		  	<img width="50%" src="../static/images/Logo_Transparent.png" alt="Avatar" class="image" syle=width="960">
 		</div>
 	</div>
 
@@ -52,15 +55,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="CBI1.jpeg" alt="first" style="width:100%;">
+        <img src="../static/images/CBI1.jpeg" alt="first" style="width:100%;">
       </div>
 
       <div class="item">
-        <img src="Test1.jpg" alt="second" style="width:100%;">
+        <img src="../static/images/Test1.jpg" alt="second" style="width:100%;">
       </div>
     
       <div class="item">
-        <img src="Test2.jpg" alt="third" style="width:100%;">
+        <img src="../static/images/Test2.jpg" alt="third" style="width:100%;">
       </div>
     </div>
 
@@ -100,17 +103,18 @@
 			<a href="https://www.youtube.com/watch?v=p-gSwQD74Tw&t=185s"><h5>• LATEST VLOG</h5></a>
 		</div>
 			<div id="social-media">
-				<button id="subscribe">Suscribe</button><br><br>
+				<button id="subscribe">Subscribe</button><br><br>
+				<form action="{{url_for('register')}}" method="post">
 				<input type="email" name="email" placeholder="email@example.com">
 				<input type="text" name="fullName" placeholder="Full name">
 				<input type="submit" value="Submit"><br><br><br>
-				
+				</form>				
 
-				<a class="icon" href="https://www.facebook.com/Chriszson/"><img src="FB.png"></a>
-				<a class="icon" href="https://www.instagram.com/chriszson"><img src="IG.png"></a>
-				<a class="icon" href="https://twitter.com/chriszson"><img src="TW.png"></a>
-				<a class="icon" href="http://www.snapchat.com/add/chriszson"><img src="SC.png"></a>
-				<a class="icon" href="https://soundcloud.com/chrisz_0n"><img src="SOUND.png"></a>
+				<a class="icon" href="https://www.facebook.com/Chriszson/"><img src="../static/images/FB.png"></a>
+				<a class="icon" href="https://www.instagram.com/chriszson"><img src="../static/images/IG.png"></a>
+				<a class="icon" href="https://twitter.com/chriszson"><img src="../static/images/TW.png"></a>
+				<a class="icon" href="http://www.snapchat.com/add/chriszson"><img src="../static/images/SC.png"></a>
+				<a class="icon" href="https://soundcloud.com/chrisz_0n"><img src="../static/images/SOUND.png"></a>
 			</div>
 	</div>
 </body>

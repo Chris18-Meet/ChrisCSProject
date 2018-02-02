@@ -1,16 +1,18 @@
-from sqlalchemy import Column, Integer, String, Date, ForeignKey, Float, Boolean, DateTime
-from sqlalchemy import create_engine
+from sqlalchemy import Column, Integer, String, Date, ForeignKey, Float, Boolean, DateTime, create_engine
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship, sessionmaker
+from sqlalchemy.orm import relationship,sessionmaker
 
 Base = declarative_base()
-if __name__ =='__main__':
-    DBSession = sessionmaker()
+engine = create_engine('sqlite:///database.db')
+
+DBSession = sessionmaker(bind=engine, autoflush=False)
+session = DBSession()
+
 
 class Emails(Base):
-    __tablename__ = 'emails'
-    id = Column(Integer, primary_key=True)
-    email = Column(String)
-    name = Column(String)
+	__tablename__ = 'emails'
+	id = Column(Integer,primary_key=True)
+	email = Column(String)
+	name = Column (String) 
 
-create_all()
+Base.metadata.create_all(engine)
