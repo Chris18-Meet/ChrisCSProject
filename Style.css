@@ -1,0 +1,200 @@
+body {
+padding: 0;
+margin: auto;
+font-family: Lato;
+background-color: black;
+}
+img{
+    float: center;
+}
+background-image {
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    left: 0px; 
+    top: 0px; 
+    z-index: -1;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: transparent;
+}
+
+li a {
+    text-align: left;
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-family: Lato;
+    -webkit-transition: all 0.5s ease;
+}
+
+h6 {
+    margin-top: 1;
+    padding-top: 1;
+
+}
+
+h5 {
+
+    color:white;
+
+}
+
+li a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: "Lato";
+    text-align: center;
+}
+h3 {
+    font-family: "Lato";
+    text-align: center;
+}
+
+button {
+    border-radius: 100px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white
+    padding: 10px;
+    width: 150px;
+    height: 30px;
+}
+
+
+#latest {
+    padding-top: 35vh;
+    color: white;
+}
+
+#News {
+    padding-top: 35vh;
+    color: white;
+}
+
+#watch-now {
+    margin-right: 30px;
+    color: white;
+}
+
+#download {
+    color: white;
+}
+
+.vertical-nav {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #0000;
+    width:200px;
+    text-align:left;
+    position: fixed;
+    top: 10px;
+    z-index: 5;
+}
+
+#first-page { 
+    background-image: url("Files_BG.png");s
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    z-index: -1
+    -webkit-transition: all 0.5s ease;
+}
+
+
+#second-page {
+    background-color: black;
+    background-size: cover center;
+    background-repeat: no-repeat;
+    height:100vh;
+    text-align: center;
+    -webkit-transition: all 0.5s ease;
+}
+
+#third-page { 
+    background-color: black;
+    background-size: cover;
+    height:100vh;
+    text-align: center;
+    position: relative;
+    -webkit-transition: all 0.5s ease;
+}
+
+#fourth-page { 
+    background-color: black;
+    background-size: cover;
+    height:100vh;
+    text-align: center;
+    position: relative;
+    -webkit-transition: all 0.5s ease;
+}
+
+#subscribe {
+/*    position: absolute;
+    margin: auto;*/
+    margin-bottom: 30px;
+    color: white;
+    bottom: 300px;
+}
+
+.icon {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#merch{
+    position:absolute;
+    bottom:300px;
+}
+
+#logo-text {
+
+    padding-top: 75px;
+}
+
+#social-media {
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    bottom: 225px;
+}
+#social-media img {
+    padding-right: 10;
+    /*position: absolute;*/
+    bottom: 225px;
+    /*left: 960px;*/
+    width:30px;
+}
+
+.some {
+    float: left;
+    font-family: "Lato";
+    width: 100%;
+    height: 50px;
+}
+
+.some a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+
+.some a:hover {
+    background-color: #111;
+}

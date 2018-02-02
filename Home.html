@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	Chriszson CBI </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="Style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="icon" 
+     type="image/png" 
+     href="Logo_Transparent_Black.png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	    $("button").click(function(){
+	        $("input").toggle();
+	    });
+	});
+	</script>
+</head>
+
+<body>
+	<div class="vertical-nav">
+	<ul>
+		<li><a href="#first-page" class="some">HOME</a><br></li>
+		<li><a href="#second-page" class="some">MEDIA</a><br></li>
+		<li><a href="#third-page" class="some">ABOUT</a><br></li>
+		<li><a href="#fourth-page" class="some">SUBSCRIBE</a></li>
+		<li><a href="Merch.html" class="some">MERCH</a></li>
+	</ul>
+
+	</div>
+
+	<div id="first-page">
+		<div id="logo-text">
+		  	<img width="50%" src="Logo_Transparent.png" alt="Avatar" class="image" syle=width="960">
+		</div>
+	</div>
+
+	<div id="second-page">
+		
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="CBI1.jpeg" alt="first" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="Test1.jpg" alt="second" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="Test2.jpg" alt="third" style="width:100%;">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+	</div>
+
+	<div id="third-page">
+		<div id="latest">
+			<h1>WE ALL REACH A POINT IN OUR LIVES AND <br> CAREERS WHERE WE UNDERSTAND WHAT <br> MATTERS THE MOST TO US.</h4>
+			<h4>For me it’s creating music. That is what I live for, what I feel I was born to do. <br>
+				<br>
+
+				The next stage will be all about my love of making music to you guys. <br> It is the beginning of something new.
+
+				Hope you´ll enjoy it as much as I do.</h6>
+			<h3>Chriszson CBI & Nasif Francis: Christmas Mashup [OUT NOW]</h3>
+			<button id="watch-now" onclick="window.location.href='https://www.youtube.com/watch?v=bw5-30742c0'"><h6>WATCH NOW</h6></button>
+			<button id="download" onclick="window.location.href='https://www.toneden.io/chrisz_0n/post/chriszson-cbi-nasif-francis-christmas-mashup'"><h6>GET YOUR FREE COPY</h6></button><br>
+		</div>
+		
+	</div>
+
+	<div id="fourth-page">
+		<div id="News">
+			<a href="https://www.youtube.com/watch?v=p_fYjxeW5Yo"><h5>• LATEST SINGLE</h5></a><br>
+			<a href="https://www.youtube.com/watch?v=bw5-30742c0"><h5>• LATEST COVER</h5></a><br>
+			<a href="https://www.youtube.com/watch?v=p-gSwQD74Tw&t=185s"><h5>• LATEST VLOG</h5></a>
+		</div>
+			<div id="social-media">
+				<button id="subscribe">Suscribe</button><br><br>
+				<input type="email" name="email" placeholder="email@example.com">
+				<input type="text" name="fullName" placeholder="Full name">
+				<input type="submit" value="Submit"><br><br><br>
+				
+
+				<a class="icon" href="https://www.facebook.com/Chriszson/"><img src="FB.png"></a>
+				<a class="icon" href="https://www.instagram.com/chriszson"><img src="IG.png"></a>
+				<a class="icon" href="https://twitter.com/chriszson"><img src="TW.png"></a>
+				<a class="icon" href="http://www.snapchat.com/add/chriszson"><img src="SC.png"></a>
+				<a class="icon" href="https://soundcloud.com/chrisz_0n"><img src="SOUND.png"></a>
+			</div>
+	</div>
+</body>
+</html>
